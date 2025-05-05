@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Digest</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"  />
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">News Digest</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+      
+      
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>News Digest</h2>
+        <p>
+          Stay up to date with the world's most relevant events with our user-friendly news platform. We offer you a simple and intuitive interface to quickly search, filter and read news based on your interests.
+        </p>
+       
+      </div>
+      <div class="img">
+        <img src="{% static 'img/main_icon.png' %}" alt="hero image" />
+      </div>
+    </section>
+    
+    {% block content %}
+    {% endblock content %}
+    {% include "footer.html" %}
+  </body>
+</html>
